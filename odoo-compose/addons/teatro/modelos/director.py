@@ -13,3 +13,5 @@ class Director(models.Model):
     experiencia = fields.Text(string='Experiencia')
     conocimientos = fields.Text(string='Conocimientos')
     destrezas = fields.Char(string='Destrezas')
+
+    obra_ids = fields.Many2many('teatro.obra', string='Obras en las que trabaja')

@@ -16,32 +16,162 @@
         </field>
     </record>
     end teatro base-->
-    
+
+    <!-- obra tree view-->
+    <record id="obra_tree_view" model="ir.ui.view">
+        <field name="name">obra.tree.view</field>
+        <field name="model">teatro.obra</field>
+        <field name="arch" type="xml">
+            <tree string="Teatro Obra">
+                <field name="titulo"/>
+                <field name="genero"/>
+                <field name="idioma"/>
+                <field name="duracion" widget="float_time"/>
+                <field name="fecha_estreno"/>
+                <field name="resumen"/>
+            </tree>
+        </field>
+    </record>
+    <!-- end obra tree view-->
+
+    <!-- persona tree view-->
+    <record id="persona_tree_view" model="ir.ui.view">
+        <field name="name">persona.tree.view</field>
+        <field name="model">teatro.persona</field>
+        <field name="arch" type="xml">
+            <tree string="Teatro Persona">
+                <field name="name"/>
+                <field name="nacionalidad"/>
+            </tree>
+        </field>
+    </record>
+    <!-- end persona tree view-->
+
+    <!-- actor tree view-->
+    <record id="actor_tree_view" model="ir.ui.view">
+        <field name="name">actor.tree.view</field>
+        <field name="model">teatro.actor</field>
+        <field name="inherit_id" ref="persona_tree_view"/>
+        <field name="arch" type="xml">
+            <tree string="Teatro Actor">
+                <field name="fecha_inicio"/>
+                <field name="personaje"/>
+            </tree>
+        </field>
+    </record>
+    <!-- end actor tree view-->
+
+    <!-- director tree view-->
+    <record id="director_tree_view" model="ir.ui.view">
+        <field name="name">director.tree.view</field>
+        <field name="model">teatro.director</field>
+        <field name="inherit_id" ref="persona_tree_view"/>
+        <field name="arch" type="xml">
+            <tree string="Teatro Director">
+                <field name="experiencia"/>
+                <field name="conocimientos"/>
+                <field name="destrezas"/>
+            </tree>
+        </field>
+    </record>
+    <!-- end director tree view-->
+
+    <!--opinion tree view-->
+    <record id="opinion_tree_view" model="ir.ui.view">
+        <field name="name">opinion.tree.view</field>
+        <field name="model">teatro.opinion</field>
+        <field name="arch" type="xml">
+            <tree string="Teatro Opinion">
+                <field name="name"/>
+                <field name="edad"/>
+                <field name="fecha"/>
+                <field name="calificacion"/>
+                <field name="comentarios"/>
+                <field name="numero"/>
+            </tree>
+        </field>
+    </record>
+    <!--end opinion tree view-->
+
+    <!--sala tree view-->
+    <record id="sala_tree_view" model="ir.ui.view">
+        <field name="name">sala.tree.view</field>
+        <field name="model">teatro.sala</field>
+        <field name="arch" type="xml">
+            <tree string="Teatro Sala">
+                <field name="name"/>
+                <field name="numero"/>
+                <field name="butacas"/>
+            </tree>
+        </field>
+    </record>
+    <!--end sala tree view-->
+
+    <!-- promocion tree view-->
+    <record id="promocion_tree_view" model="ir.ui.view">
+        <field name="name">promocion.tree.view</field>
+        <field name="model">teatro.promocion</field>
+        <field name="arch" type="xml">
+            <tree string="Teatro Promocion">
+                <field name="codigo"/>
+                <field name="descripcion"/>
+                <field name="descuento" widget="percentpie"/>
+            </tree>
+        </field>
+    </record>
+    <!-- end promocion tree view-->
+
+
+
     <!-- Definir menu - vistas de modelos-->
     <!-- vista obra-->
     <record id="obra_action" model="ir.actions.act_window">
-        <field name="name">Obra</field>
+        <field name="name">Obras</field>
         <field name="res_model">teatro.obra</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- vista actor-->
     <record id="actor_action" model="ir.actions.act_window">
-        <field name="name">Actor</field>
+        <field name="name">Actores</field>
         <field name="res_model">teatro.actor</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- vista director-->
     <record id="director_action" model="ir.actions.act_window">
-        <field name="name">Director</field>
+        <field name="name">Directores</field>
         <field name="res_model">teatro.director</field>
         <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- vista opinion-->
+    <record id="opinion_action" model="ir.actions.act_window">
+        <field name="name">Opiniones</field>
+        <field name="res_model">teatro.opinion</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- vista sala-->
+    <record id="sala_action" model="ir.actions.act_window">
+        <field name="name">Salas</field>
+        <field name="res_model">teatro.sala</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- vista promocion-->
+    <record id="promocion_action" model="ir.actions.act_window">
+        <field name="name">Promociones</field>
+        <field name="res_model">teatro.promocion</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <!-- menu categorias-->
-    <menuitem id="teatro.root_menu" name="TEATRO" sequence="10"/>
-    <menuitem name="Obra" id="obra_menu" parent="teatro.root_menu" action="obra_action"/>  
-    <menuitem name="Actore" id="actor_menu" parent="teatro.root_menu" action="actor_action"/>
-    <menuitem name="Directore" id="director_menu" parent="teatro.root_menu" action="director_action"/>
+    <menuitem id="teatro_root_menu" name="TEATRO" sequence="10"/>
+    <menuitem name="Obras" id="obra_menu" parent="teatro_root_menu" action="obra_action"/>  
+    <menuitem name="Actores" id="actor_menu" parent="teatro_root_menu" action="actor_action"/>
+    <menuitem name="Directores" id="director_menu" parent="teatro_root_menu" action="director_action"/>
+    <menuitem name="Opiniones" id="opinion_menu" parent="teatro_root_menu" action="opinion_action"/>
+    <menuitem name="Salas" id="sala_menu" parent="teatro_root_menu" action="sala_action"/>
+    <menuitem name="Promociones" id="promocion_menu" parent="teatro_root_menu" action="promocion_action"/>
 </odoo>

@@ -3,7 +3,7 @@ from odoo import models, fields, api
 
 class Base(models.Model):
     _name = 'teatro.base' #la info se guarada en la tabla teatro_base
-    _description = 'Base class to be inherited' #para heredar
+    _description = 'Clase base para heredar'
 
     name = fields.Char(string='Nombre', required=True)
     description = fields.Text(string='Descripción')

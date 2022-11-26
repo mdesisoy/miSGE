@@ -13,3 +13,5 @@ class Actor(models.Model):
 
     fecha_inicio = fields.Date(string='Fecha de inicio de la trayectoria profesional')
     personaje = fields.Char(string='Personaje que interpreta')
+    
+    obra_ids = fields.Many2many('teatro.obra', string='Obras en las que trabaja')

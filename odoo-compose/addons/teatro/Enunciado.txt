@@ -1,7 +1,6 @@
 Se desea crear un sitio web con información referente a las obras de teatro 
 que se realizan en las diferentes salas del teatro Gran Via.
 
-
 De cada obra, se almacena un identificador, el título de la obra, su género, 
 el idioma original, la duración (en horas y minutos), la fecha de estreno y 
 un resumen.

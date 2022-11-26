@@ -1,0 +1,25 @@
+Se desea crear un sitio web con información referente a las obras de teatro 
+que se realizan en las diferentes salas del teatro Gran Via.
+
+
+De cada obra, se almacena un identificador, el título de la obra, su género, 
+el idioma original, la duración (en horas y minutos), la fecha de estreno y 
+un resumen.
+Además de cada obra, interesa tener información sobre las  personas 
+(directores y actores) que están trabajando en ella, teniendo en cuenta 
+que estas personas a lo largo de su trayectoria profesional pueden realizar 
+más obras de teatro. Tanto de los directores como de los actores, se conoce 
+su nombre y su nacionalidad. Además se desea conocer de  los directores la 
+experiencia, conocimientos y destrezas y de los actores la fecha de comienzo 
+de su trayectoria profesional y el personaje que interpretan en cada obra 
+en la que trabajan.
+De cada obra de teatro se desean guardar las opiniones de las personas que 
+la  han visto. De cada opinión se conoce el nombre de la persona que la realiza, 
+su edad, la fecha en que registró su opinión, la calificación que le dio a 
+la obra y otros comentarios. A cada opinión se le asigna un número.
+El teatro tiene varias  salas donde se realizan diferentes obras pero una 
+determinada obra se realiza en una única sala.
+De cada sala se sabe el nombre, un número que la identifica y la cantidad 
+de butacas que posee.
+Algunos obras cuentan con diferentes promociones. De cada promoción se 
+conoce el código, descripción, el descuento que aplica.

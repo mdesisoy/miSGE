@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-	 'name': "lol",
+	'name': "lol",
     'summary': """league of legends""",
     'description': """
         Lol module to record matches score:
     """,
-    'author': "unknown",
-    'website': "http://www.salesuanos.edu",
+    'author': "Maria Lozano",
+    'website': "http://www.salesianos.edu",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
@@ -19,7 +19,8 @@
 
     # always loaded
     'data': [
-        'views.xml',
+    'views.xml',
+    # 'vistas/teams.xml',
 	# 'vistas/matches.xml',
 	# 'vistas/maps.xml',
 	# 'vistas/characters.xml',

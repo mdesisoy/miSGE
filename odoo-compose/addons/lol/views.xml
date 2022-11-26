@@ -48,16 +48,16 @@
 		<field name="name">Villanos</field>
 		<field name="res_model">lol.villanos</field>
 		<field name="view_mode">tree,form</field>	
-    </record>
+  </record>
 
     <!-- add batallas act_windows -->
-    <record id="batallas_action" model="ir.actions.act_window">
+  <record id="batallas_action" model="ir.actions.act_window">
 		<field name="name">Batallas</field>
 		<field name="res_model">lol.batallas</field>
 		<field name="view_mode">tree,form,calendar</field>
-    </record>
+  </record>
     
-    <record id="Batallas_calendar" model="ir.ui.view">
+  <record id="Batallas_calendar" model="ir.ui.view">
 		<field name="name">Batallas Calendar</field>
 		<field name="model">lol.batallas</field>
 		<field name="type">calendar</field>
@@ -68,9 +68,10 @@
       <field name="lugar"/>
 			</calendar>
 		</field>
-    </record>
+  </record>
 
     <!-- add batallas tree view -->
+    <!-- Lo ha usado para en heroes_tree para que se vea al lado del name-->
     <record id="Batallas_tree" model="ir.ui.view">
     <field name="name">Batallas Tree</field>
     <field name="model">lol.batallas</field>
@@ -119,6 +120,7 @@
 			</form>
 		</field>
 	</record>
+
 	<record id="villanos_form" model="ir.ui.view">
 		<field name="name">villanos.form</field>
 		<field name="model">lol.villanos</field>
@@ -129,12 +131,14 @@
 				</group>
 			</form>
 		</field>
-    </record>
+  </record>
+
 	<record id="Debilidades_action" model="ir.actions.act_window">
 		<field name="name">Debilidades</field>
 		<field name="res_model">lol.debilidades</field>
 		<field name="view_mode">tree,form</field>
-    </record>
+  </record>
+
 <menuitem
 	id="lol_root_menu"
 	name="LOL"

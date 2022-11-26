@@ -5,7 +5,7 @@ import datetime
 
 
 class Base(models.Model):
-    _name = 'lol.base'
+    _name = 'lol.base' #la info se guarada en la tabla lol_base
     _description = 'Base class to be inherited'
 
     name = fields.Char(string='Nombre', required=True)

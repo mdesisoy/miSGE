@@ -11,7 +11,7 @@ class Promocion(models.Model):
     _inherit = 'teatro.base'
 
     codigo = fields.Integer(string='Codigo de la promocion', required=True)
-    descripcion = fields.Text(string='Descripcion de la promocion', required=True)
+    description = fields.Text(string='Descripcion de la promocion', required=True)
     descuento = fields.Float(string='Descuento', required=True)
 
     obra_ids = fields.Many2many('teatro.obra', string='Obras en las que se aplica la promocion')

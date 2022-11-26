@@ -16,7 +16,7 @@ class Opinion(models.Model):
     edad = fields.Integer(string='Edad')
     fecha = fields.Date(string='Fecha de la opinion')
     calificacion = fields.Integer(string='Calificacion')
-    comentarios = fields.Text(string='Comentarios')
+    description = fields.Text(string='Comentarios')
     numero = fields.Integer(string='Numero de la opinion', required=True)
 
     obra_id = fields.Many2one('teatro.obra', string='Obra a la que pertenece la opinion')

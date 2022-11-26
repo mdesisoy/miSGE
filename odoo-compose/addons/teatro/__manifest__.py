@@ -21,10 +21,6 @@
     # always loaded
     'data': [
     'views.xml',
-    # añadir vistas en carpetas si es necesario
-    # 'vistas/teams.xml',
-	# 'vistas/matches.xml',
-	# 'vistas/maps.xml',
-	# 'vistas/characters.xml',
+    # añadir vistas en carpetas si es necesario,
     ],
 }

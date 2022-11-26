@@ -2,6 +2,8 @@
 #el idioma original, la duración (en horas y minutos), la fecha de estreno y 
 #un resumen.
 
+# -*- coding: utf-8 -*-
+
 from odoo import models, fields, api
 from . import base
 

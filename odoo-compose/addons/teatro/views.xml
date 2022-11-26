@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- add teatro base form
+    <record id="teatro_base_form" model="ir.ui.view">
+        <field name="name">teatro.base.form</field>
+        <field name="model">teatro.base</field>
+        <field name="arch" type="xml">
+            <form string="Teatro Base">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    end teatro base-->
+    
+    <!-- Definir menu - vistas de modelos-->
+    <!-- vista obra-->
+    <record id="obra_action" model="ir.actions.act_window">
+        <field name="name">Obra</field>
+        <field name="res_model">teatro.obra</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- vista actor-->
+    <record id="actor_action" model="ir.actions.act_window">
+        <field name="name">Actor</field>
+        <field name="res_model">teatro.actor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- vista director-->
+    <record id="director_action" model="ir.actions.act_window">
+        <field name="name">Director</field>
+        <field name="res_model">teatro.director</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menu categorias-->
+    <menuitem id="teatro.root_menu" name="TEATRO" sequence="10"/>
+    <menuitem name="Obra" id="obra_menu" parent="teatro.root_menu" action="obra_action"/>  
+    <menuitem name="Actore" id="actor_menu" parent="teatro.root_menu" action="actor_action"/>
+    <menuitem name="Directore" id="director_menu" parent="teatro.root_menu" action="director_action"/>
+</odoo>

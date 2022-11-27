@@ -14,4 +14,4 @@ class Director(models.Model):
     conocimientos = fields.Text(string='Conocimientos')
     destrezas = fields.Char(string='Destrezas')
 
-    obra_ids = fields.One2many('teatro.obra', 'director_id', string='Obras que dirige el director')
+    obra_ids = fields.Many2many('teatro.obra', 'director_id', string='Obras que dirige el director')

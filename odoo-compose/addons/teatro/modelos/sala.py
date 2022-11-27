@@ -13,7 +13,7 @@ class Sala(models.Model):
     _inherit = 'teatro.base'
 
     name = fields.Char(string='Nombre de la sala', required=True)
-    #numero = fields.Integer(string='Numero de la sala', required=True)
+    numero = fields.Integer(string='Numero de la sala', required=True)
     butacas = fields.Integer(string='Cantidad de butacas', required=True)
 
     obra_ids = fields.One2many('teatro.obra', 'sala_id', string='Obras que se realizan en la sala')

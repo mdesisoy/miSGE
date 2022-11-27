@@ -23,12 +23,12 @@
         <field name="model">teatro.obra</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="titulo"/>
                 <field name="genero"/>
                 <field name="idioma"/>
                 <field name="duracion" widget="float_time"/>
                 <field name="fecha_estreno"/>
-                <field name="description"/>
+                <field name="resumen"/>
             </tree>
         </field>
     </record>
@@ -86,7 +86,7 @@
                 <field name="edad"/>
                 <field name="fecha"/>
                 <field name="calificacion"/>
-                <field name="description"/>
+                <field name="comentarios"/>
                 <field name="numero"/>
             </tree>
         </field>
@@ -100,6 +100,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="numero"/>
                 <field name="butacas"/>
             </tree>
         </field>

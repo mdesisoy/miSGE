@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class Perros(models.Model):
     _name = "perritos"
-    altura = fields.Integer(string="Altura del animal, compute = _compute_name")
+    altura = fields.Integer(string="Altura del animal", compute = '_compute_name')
     raza = fields.Char(string="raza del animal")
     duenos_id = fields.Many2one("duenos", "dueños asociados")
     peso = fields.Integer(string="Peso del animal")

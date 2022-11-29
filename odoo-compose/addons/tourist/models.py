@@ -5,8 +5,8 @@ from odoo import models, fields, api
 
 class Perros(models.Model):
     _name = "perritos"
-    altura = fields.Integer(string="Altura del animal", compute = '_compute_name')
-    raza = fields.Char(string="raza del animal")
+    altura = fields.Integer(string="Altura del animal")
+    raza = fields.Char(string="raza del animal", compute = '_compute_name')
     duenos_id = fields.Many2one("duenos", "dueños asociados")
     peso = fields.Integer(string="Peso del animal")
     imc = fields.Integer(string="calculo de indice mas corporal")
@@ -19,6 +19,7 @@ class Perros(models.Model):
             if record.duenos_id.edad > 20:
                 raise ValidationError("too old: %s" % record.age)
 
+    @api.depends('altura')
     def _compute_name(self):
         for record in self:
             record.raza = str(record.altura)

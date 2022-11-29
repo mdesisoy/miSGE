@@ -16,4 +16,5 @@ class Sala(models.Model):
     numero = fields.Integer(string='Numero de la sala', required=True)
     butacas = fields.Integer(string='Cantidad de butacas', required=True)
 
+#Una sala tiene varias obras
     obra_ids = fields.One2many('teatro.obra', 'sala_id', string='Obras que se realizan en la sala')

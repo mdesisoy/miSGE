@@ -1,9 +1,7 @@
 <odoo>
-
-
     <record model="ir.actions.act_window" id="vets_list_action">
         <field name="name">vets</field>
-        <field name="res_model">personas</field>
+        <field name="res_model">personas</field> <!--es el _name en clases o inherit si no tiene name-->
         <field name="view_mode">tree,form</field>
     </record>
     <record model="ir.actions.act_window" id="duenos_list_action">
@@ -240,7 +238,7 @@
                 </calendar>
             </field>
         </record>
-       
+       <!--
         <record model="ir.ui.view" id="perritos_form_view">
           <field name="name">perritos.form</field>
             <field name="model">perritos</field>
@@ -255,7 +253,7 @@
                   </sheet>
                 </form>
             </field>
-        </record>
+        </record>-->
         <record model="ir.ui.view" id="peVrrazos_tree_view">
           <field name="name">perritos.tree</field>
             <field name="model">perritos</field>

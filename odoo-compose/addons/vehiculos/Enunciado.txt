@@ -1,0 +1,41 @@
+Vehículo(2,5 puntos)
+1)marca
+2)color-> es un campo selection con los valores {blanco, gris, negro}
+3)cantidad de asientos
+4)conductores->Un vehículo ha podido ser conducido sólo un conductor
+5)viajes->Un vehículo ha podido ser realizar n viajes
+6)seguro-> un vehiculo puede tener un seguro
+Se mostrarán las vistas de form y de tree, en el listado ademas se marcarán de 
+color aquellos vehiculos cuyo seguro haya vencido en plazo.
+-------------------------------------------------------------------------------------------------------------------------------
+Conductor(1,5 puntos)
+1)Nos interesa saber su nombre y dni
+2)Un conductor ha podido conducir n vehiculos
+Se mostrarán las vistas form y tree
+-------------------------------------------------------------------------------------------------------------------------------
+Cada vehículo lleva asociado un seguro
+Seguro(2 puntos)
+1)nombre de la compañía aseguradora
+2)fecha de vencimiento de seguro
+3) vehiculo-> un seguro pertenece a un vehiculo
+Mostrar las vistas Form, tree
+-------------------------------------------------------------------------------------------------------------------------------
+Cada coche ha podido realizar n viajes entre un origen y un destino
+De cada viaje interesa saber
+Viaje(3 puntos)
+1)Vehiculo que lo ha realizado, un viaje es realizado por un vehiculo
+2)provincia origen -> 1:1 Relación con el modelo provincia
+3)provincia destino -> 1:1 Relación con el modelo provincia
+4) fecha de realización
+5) duración en horas
+6) un campo onchange que mediante un booleano indique si la duración ha sido mayor 
+a 2 horas
+se debe mostrar un aviso si el vehiculo del viaje tiene el seguro caducado
+Mostrar las vistas form, tree
+-------------------------------------------------------------------------------------------------------------------------------
+de cada provincia deseamos conocer
+Provincia(1 punto)
+1)nombre de la provincia
+Mostrar las vistas form, tree
+-------------------------------------------------------------------------------------------------------------------------------
+Se mostrarán las vistas de form y de tree

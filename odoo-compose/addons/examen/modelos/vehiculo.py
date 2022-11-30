@@ -7,12 +7,11 @@
 
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
-from . import base
 
 class Vehiculo(models.Model):
     _name = 'examen.vehiculo'
     _description = 'Vehiculo'
-    _inherit = 'examen.base'
+
 
     marca = fields.Char(string='Marca', required=True)
     color = fields.Selection(string='Color',selection = [('blanco', 'Blanco'), ('gris', 'Gris'), ('negro', 'Negro')])

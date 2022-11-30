@@ -15,7 +15,7 @@ class vehiculo(models.Model):
     _inherit = 'vehiculo.base'
 
     marca = fields.Char(string='Marca', required=True)
-    color = fields.Selection([('blanco', 'Blanco'), ('gris', 'Gris'), ('negro', 'Negro')])
+    color = fields.Selection(string='Color',selection = [('blanco', 'Blanco'), ('gris', 'Gris'), ('negro', 'Negro')])
     asientos = fields.Integer(string='Cantidad de asientos', required=True)
 
     conductor_id = fields.Many2one('vehiculo.conductor', string='Conductor')

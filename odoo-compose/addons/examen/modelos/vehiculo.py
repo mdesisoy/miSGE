@@ -9,17 +9,17 @@
 from odoo import models, fields, api
 from . import base
 
-class vehiculo(models.Model):
-    _name = 'vehiculo.vehiculo'
-    _description = 'Clase vehiculo'
-    _inherit = 'vehiculo.base'
+class Vehiculo(models.Model):
+    _name = 'examen.vehiculo'
+    _description = 'Vehiculo'
+    _inherit = 'examen.base'
 
     marca = fields.Char(string='Marca', required=True)
     color = fields.Selection(string='Color',selection = [('blanco', 'Blanco'), ('gris', 'Gris'), ('negro', 'Negro')])
     asientos = fields.Integer(string='Cantidad de asientos', required=True)
 
-    conductor_id = fields.Many2one('vehiculo.conductor', string='Conductor')
-    viaje_ids = fields.One2many('vehiculo.viaje', 'vehiculo_id', string='Viajes')
-    seguro_id = fields.Many2one('vehiculo.seguro', string='Seguro')
+    conductor_id = fields.Many2one('examen.conductor', string='Conductor', required=True)
+    viaje_ids = fields.One2many('examen.viaje', 'vehiculo_id', string='Viajes')
+    seguro_id = fields.One2many('examen.seguro', 'vehiculo_id', string='Seguro')
 
 

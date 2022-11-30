@@ -5,11 +5,10 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
-class conductor(models.Model):
-    _name = 'vehiculo.conductor'
-    _description = 'Clase conductor'
-    
+class Conductor(models.Model):
+    _name = 'examen.conductor'
+    _description = 'Conductor'
+
     nombre = fields.Char(string='Nombre', required=True)
     dni = fields.Char(string='DNI', required=True)
-
     vehiculo_ids = fields.One2many('vehiculo.vehiculo', 'conductor_id', string='Vehiculos')

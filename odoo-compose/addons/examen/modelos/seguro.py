@@ -7,11 +7,11 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
-class seguro(models.Model):
-    _name = 'vehiculo.seguro'
-    _description = 'Clase seguro'
-    
+class Seguro(models.Model):
+    _name = 'examen.seguro'
+    _description = 'Seguro'
+
     compania = fields.Char(string='Nombre de la compañia', required=True)
     fecha_vencimiento = fields.Date(string='Fecha de vencimiento', required=True)
     
-    vehiculo_id = fields.Many2one('vehiculo.vehiculo', string='Vehiculo')
+    vehiculo_id = fields.Many2one('vehiculo.vehiculo', string='Vehiculo', required=True)

@@ -12,13 +12,13 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
-class viaje(models.Model):
-    _name = 'vehiculo.viaje'
+class Viaje(models.Model):
+    _name = 'examen.viaje'
     _description = 'Clase viaje'
     
-    vehiculo_id = fields.Many2one('vehiculo.vehiculo', string='Vehiculo')
-    provincia_origen_id = fields.Many2one('vehiculo.provincia', string='Provincia de origen')
-    provincia_destino_id = fields.Many2one('vehiculo.provincia', string='Provincia de destino')
+    vehiculo_id = fields.Many2one('examen.vehiculo', string='Vehiculo', required=True)
+    provincia_origen_id = fields.One2one('examen.provincia', string='Provincia origen', required=True)
+    provincia_destino_id = fields.One2one('examen.provincia', string='Provincia destino', required=True)
     fecha_realizacion = fields.Date(string='Fecha de realizacion', required=True)
     duracion = fields.Integer(string='Duracion en horas', required=True)
     seguro_caducado = fields.Boolean(string='Seguro caducado', compute='_compute_seguro_caducado', store=True)

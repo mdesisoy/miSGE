@@ -39,3 +39,8 @@ Provincia(1 punto)
 Mostrar las vistas form, tree
 -------------------------------------------------------------------------------------------------------------------------------
 Se mostrarán las vistas de form y de tree
+
+
+<menuitem name="Conductores" id="conductor_menu" parent="vehiculos_root_menu" action="conductor_action"/>
+    <menuitem name="Seguros" id="seguro_menu" parent="vehiculos_root_menu" action="seguro_action"/>
+    <menuitem name="Viajes" id="viaje_menu" parent="vehiculos_root_menu" action="viaje_action"/>

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-	'name': "vehiculos",
+	'name': "examen",
     'summary': """Sistema de Gestión de Vehículos de Odoo""",
     'description': """
         avanzada herramienta que permite gestionar todas las características 

@@ -10,5 +10,5 @@ class Provincia(models.Model):
 
     nombre = fields.Char(string="Nombre de la provincia", required=True)
 
-    viaje_ids = fields.One2many('vehiculo.viaje', 'provincia_id', string='Viajes')
+    #viaje_ids = fields.One2many('vehiculo.viaje', 'provincia_id', string='Viajes')
 

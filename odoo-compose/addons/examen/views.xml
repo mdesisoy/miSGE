@@ -1,102 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <!-- formularios-->
-        <record id="vehiculo_view_tree" model="ir.ui.view">
-            <field name="name">vehiculo_view_tree</field>
-            <field name="model">examen_odo.vehiculo</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="marca"/>
-                    <field name="color"/>
-                    <field name="cantidad_asientos"/>
-                </tree>
-            </field>
-        </record>
+    <!-- vehiculo form-->
+    <record id="vehiculo_view_form" model="ir.ui.view">
+        <field name="name">vehiculo_view_form</field>
+        <field name="model">examen.vehiculo</field>
+        <field name="arch" type="xml">
+            <form string="Vehiculo">
+                <sheet>
+                    <group>
+                        <field name="marca"/>
+                        <field name="color"/>
+                        <field name="asientos"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- tree vehiculo-->
+    <record id="vehiculo_view_tree" model="ir.ui.view">
+        <field name="name">vehiculo_view_tree</field>
+        <field name="model">examen.vehiculo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="marca"/>
+                <field name="color"/>
+                <field name="asientos"/>
+            </tree>
+        </field>
+    </record>
 
-        <record id="conductor_view_tree" model="ir.ui.view">
-            <field name="name">conductor_view_tree</field>
-            <field name="model">examen_odo.conductor</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="nombre"/>
-                    <field name="dni"/>
-                </tree>
-            </field>
-        </record>
+    <!-- conductor form-->
+    <record id="conductor_view_form" model="ir.ui.view">
+        <field name="name">conductor_view_form</field>
+        <field name="model">examen.conductor</field>
+        <field name="arch" type="xml">
+            <form string="Conductor">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="dni"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record id="seguro_view_tree" model="ir.ui.view">
-            <field name="name">seguro_view_tree</field>
-            <field name="model">examen_odo.seguro</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="nombre_aseguradora"/>
-                    <field name="fecha_vencimiento"/>
-                </tree>
-            </field>
-        </record>
+    <!-- conductor tree-->
+    <record id="conductor_view_tree" model="ir.ui.view">
+        <field name="name">conductor_view_tree</field>
+        <field name="model">examen.conductor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="dni"/>
+            </tree>
+        </field>
+    </record>
 
-        <record id="viaje_view_tree" model="ir.ui.view">
-            <field name="name">viaje_view_tree</field>
-            <field name="model">examen_odo.viaje</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="fecha_realizacion"/>
-                    <field name="duracion"/>
-                </tree>
-            </field>
-        </record>
+    <!-- seguro form-->
+    <record id="seguro_view_form" model="ir.ui.view">
+        <field name="name">seguro_view_form</field>
+        <field name="model">examen.seguro</field>
+        <field name="arch" type="xml">
+            <form string="Seguro">
+                <sheet>
+                    <group>
+                        <field name="compania"/>
+                        <field name="fecha_vencimiento"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record id="provincia_view_tree" model="ir.ui.view">
-            <field name="name">provincia_view_tree</field>
-            <field name="model">examen_odo.provincia</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="nombre"/>
-                </tree>
-            </field>
-        </record>
+    <!-- seguro tree-->
+    <record id="seguro_view_tree" model="ir.ui.view">
+        <field name="name">seguro_view_tree</field>
+        <field name="model">examen.seguro</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="compania"/>
+                <field name="fecha_vencimiento"/>
+            </tree>
+        </field>
+    </record>
 
-        <!-- acciones menu -->
-        <record model="ir.actions.act_window" id="vehiculo_action" >
-            <field name="name">vehiculo</field>
-            <field name="res_model">examen_odo.vehiculo</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+    <!-- viaje form-->
+    <record id="viaje_view_form" model="ir.ui.view">
+        <field name="name">viaje_view_form</field>
+        <field name="model">examen.viaje</field>
+        <field name="arch" type="xml">
+            <form string="Viaje">
+                <sheet>
+                    <group>
+                        <field name="provincia_origen_id"/>
+                        <field name="provincia_destino_id"/>
+                        <field name="fecha_realizacion"/>
+                        <field name="duracion"/>
+                        <field name="seguro_caducado"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="conductor_action" >
-            <field name="name">conductor</field>
-            <field name="res_model">examen_odo.conductor</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+    <!-- viaje tree-->
+    <record id="viaje_view_tree" model="ir.ui.view">
+        <field name="name">viaje_view_tree</field>
+        <field name="model">examen.viaje</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="provincia_origen_id"/>
+                <field name="provincia_destino_id"/>
+                <field name="fecha_realizacion"/>
+                <field name="duracion"/>
+                <field name="seguro_caducado"/>
+            </tree>
+        </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="seguro_action" >
-            <field name="name">seguro</field>
-            <field name="res_model">examen_odo.seguro</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+    <!-- provincia form-->
+    <record id="provincia_view_form" model="ir.ui.view">
+        <field name="name">provincia_view_form</field>
+        <field name="model">examen.provincia</field>
+        <field name="arch" type="xml">
+            <form string="Provincia">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="viaje_action" >
-            <field name="name">viaje</field>
-            <field name="res_model">examen_odo.viaje</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+    <!-- provincia tree-->
+    <record id="provincia_view_tree" model="ir.ui.view">
+        <field name="name">provincia_view_tree</field>
+        <field name="model">examen.provincia</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+            </tree>
+        </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="provincia_action" >
-            <field name="name">provincia</field>
-            <field name="res_model">examen_odo.provincia</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-        
-        <!-- Menu -->
-        <menuitem name="EXAMEN_ODO" id="examen_odo_root_menu"/>
+    <!-- acciones menu -->
+    <record model="ir.actions.act_window" id="vehiculo_action" >
+        <field name="name">vehiculo</field>
+        <field name="res_model">examen.vehiculo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-        <!-- Para mostrar los menus en odoo -->
-        <menuitem name="vehiculo" id="vehiculo_menu" parent="examen_odo_root_menu" action="vehiculo_action"/>
-        <menuitem name="conductor" id="conductor_menu" parent="examen_odo_root_menu" action="conductor_action"/>
-        <menuitem name="seguro" id="seguro_menu" parent="examen_odo_root_menu" action="seguro_action"/>
-        <menuitem name="viaje" id="viaje_menu" parent="examen_odo_root_menu" action="viaje_action"/>
-        <menuitem name="provincia" id="provincia_menu" parent="examen_odo_root_menu" action="provincia_action"/>
-        
-    </data>          
+    <record model="ir.actions.act_window" id="conductor_action" >
+        <field name="name">conductor</field>
+        <field name="res_model">examen.conductor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="seguro_action" >
+        <field name="name">seguro</field>
+        <field name="res_model">examen.seguro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="viaje_action" >
+        <field name="name">viaje</field>
+        <field name="res_model">examen.viaje</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="provincia_action" >
+        <field name="name">provincia</field>
+        <field name="res_model">examen.provincia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- Menu -->
+    <menuitem id="examen_root_menu" name="EXAMEN"/>
+
+    <!-- Para mostrar los menus en odoo -->
+    <menuitem name="vehiculo" id="vehiculo_menu" parent="examen_root_menu" action="vehiculo_action"/>
+    <menuitem name="conductor" id="conductor_menu" parent="examen_root_menu" action="conductor_action"/>
+    <menuitem name="seguro" id="seguro_menu" parent="examen_root_menu" action="seguro_action"/>
+    <menuitem name="viaje" id="viaje_menu" parent="examen_root_menu" action="viaje_action"/>
+    <menuitem name="provincia" id="provincia_menu" parent="examen_root_menu" action="provincia_action"/>  
 </odoo>
